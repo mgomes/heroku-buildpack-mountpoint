@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "MOUNTPOINT_S3_BUCKET detected"
+echo "Mountpoint for Amazon S3"
 exit 0
