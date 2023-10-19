@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z "${MOUNTPOINT_S3_BUCKET}" ]; then
+  echo "MOUNTPOINT_S3_BUCKET NOT detected"
+  exit 1
+else
+  echo "MOUNTPOINT_S3_BUCKET detected"
+  exit 0
+fi
