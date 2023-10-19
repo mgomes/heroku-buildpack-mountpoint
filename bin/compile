@@ -22,8 +22,8 @@ fi
 echo "-----> Installing Mountpoint for Amazon S3..."
 
 # Download and install Ollama binary
-curl -A "heroku-buildpack-mountpoint" -s --retry 3 -L https://s3.amazonaws.com/mountpoint-s3-release/latest/x86_64/mount-s3.deb -o mount-s3.deb
-sudo dpkg -i $BUILD_DIR/mount-s3.deb
+# curl -A "heroku-buildpack-mountpoint" -s --retry 3 -L https://s3.amazonaws.com/mountpoint-s3-release/latest/x86_64/mount-s3.deb -o mount-s3.deb
+# sudo dpkg -i $BUILD_DIR/mount-s3.deb
 
 echo "-----> Mounting S3 bucket..."
 mount-s3 $MOUNTPOINT_S3_BUCKET $MOUNTPOINT_PATH
