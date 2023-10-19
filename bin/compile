@@ -14,7 +14,7 @@ source "$BIN_DIR/util"
 
 export_env_dir $ENV_DIR
 
-echo $3
+echo $(ls -la $ENV_DIR)
 echo "MOUNTPOINT_S3_BUCKET: $MOUNTPOINT_S3_BUCKET"
 echo "MOUNTPOINT_PATH: $MOUNTPOINT_PATH"
 
