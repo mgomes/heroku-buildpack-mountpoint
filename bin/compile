@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
+# parse args
 BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
 
 BIN_DIR=$(
   cd "$(dirname "$0")"
@@ -11,7 +14,6 @@ source "$BIN_DIR/util"
 
 export_env_dir $ENV_DIR
 
-echo "-----> Mountpoint for Amazon S3 detection"
 echo "MOUNTPOINT_S3_BUCKET: $MOUNTPOINT_S3_BUCKET"
 echo "MOUNTPOINT_PATH: $MOUNTPOINT_PATH"
 
