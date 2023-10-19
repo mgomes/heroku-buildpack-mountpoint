@@ -9,6 +9,10 @@ source "$BIN_DIR/util"
 
 export_env_dir "${ENV_DIR}" "AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY|MOUNTPOINT_S3_BUCKET|MOUNTPOINT_PATH"
 
+echo "-----> Mountpoint for Amazon S3 detection"
+echo "MOUNTPOINT_S3_BUCKET: $MOUNTPOINT_S3_BUCKET"
+echo "MOUNTPOINT_PATH: $MOUNTPOINT_PATH"
+
 if [ -z "${MOUNTPOINT_S3_BUCKET}" ] && [ -z "${MOUNTPOINT_PATH}" ]; then
   echo "MOUNTPOINT_S3_BUCKET NOT detected"
   exit 1
