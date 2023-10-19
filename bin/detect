@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z "${MOUNTPOINT_S3_BUCKET}" ]; then
+if [ -z "${MOUNTPOINT_S3_BUCKET}" ] && [ -z "${MOUNTPOINT_PATH}" ]; then
   echo "MOUNTPOINT_S3_BUCKET NOT detected"
   exit 1
 else
