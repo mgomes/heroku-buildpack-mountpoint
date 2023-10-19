@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 BUILD_DIR=$1
 
@@ -9,6 +9,6 @@ curl -A "heroku-buildpack-mountpoint" -s --retry 3 -L https://s3.amazonaws.com/m
 apt-get install -y $BUILD_DIR/mount-s3.deb
 
 echo "-----> Mounting S3 bucket..."
-mount-s3 $MOUNTPOINT_S3_BUCKET /mnt/s3
+mount-s3 $MOUNTPOINT_S3_BUCKET $MOUNTPOINT_PATH
 
 echo "-----> Mountpoint for Amazon S3 installation done"
