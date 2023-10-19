@@ -29,7 +29,6 @@ echo "-----> Mounting S3 bucket..."
 export PATH=$PATH:$BUILD_DIR/.apt/opt/aws/mountpoint-s3/bin
 
 # mount the bucket
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu
-mount-s3 $MOUNTPOINT_S3_BUCKET $MOUNTPOINT_PATH
+LD_LIBRARY_PATH=$BUILD_DIR/.apt/usr/lib/x86_64-linux-gnu mount-s3 $MOUNTPOINT_S3_BUCKET $MOUNTPOINT_PATH
 
 echo "-----> Mountpoint for Amazon S3 installation done"
