@@ -26,7 +26,9 @@ echo "-----> Installing Mountpoint for Amazon S3..."
 # sudo dpkg -i $BUILD_DIR/mount-s3.deb
 
 echo "-----> Mounting S3 bucket..."
-echo $LD_LIBRARY_PATH
-$BUILD_DIR/.apt/opt/aws/mountpoint-s3/bin/mount-s3 $MOUNTPOINT_S3_BUCKET $MOUNTPOINT_PATH
+export PATH=$PATH:$BUILD_DIR/.apt/opt/aws/mountpoint-s3/bin
+
+# mount the bucket
+mount-s3 $MOUNTPOINT_S3_BUCKET $MOUNTPOINT_PATH
 
 echo "-----> Mountpoint for Amazon S3 installation done"
